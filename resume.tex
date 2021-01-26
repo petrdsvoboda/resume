@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in Latex
+% Author : Petr D. Svoboda
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\fboxsep}{0pt}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\stretch{1}}}r|r}
+  \textbf{\href{http://petrdsvoboda.com/}{\Large Bc. Petr Svoboda}} &
+  Email : \href{mailto:petrdsvoboda@gmail.com}{petrdsvoboda@gmail.com} &
+  \multirow{2}{*}{\smash{\fbox{\includegraphics[width=2cm, valign=c]{profile_pic_sm}}}} \\
+
+  \href{http://petrdsvoboda.com/}{http://petrdsvoboda.com} &
+  Mobile : +420 603 451 300 &
+  \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Czech Technical University, Faculty of Informatics}{Prague, Czechia}
+      {Web and Software Engineering; Master's degree}{Sep 2019 -- Present}
+    \resumeSubheading
+      {Czech Technical University, Faculty of Informatics}{Prague, Czechia}
+      {Web and Software Engineering; Bachelor's degree}{Sep 2016 -- July 2019}
+    \resumeSubheading
+      {Secondary Technical School Třebešín}{Prague, Czechia}
+      {Information Technologies}{Sep 2011 -- June 2015}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Sécheron Hasler Group}{Prague, Czechia}
+      {ERP analyst (software developer)}{Sep 2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{Workflow}{Custom workflow management system implementing processes. Contains complex permission, substitution and approval subsystems.}
+        \resumeItem{Data display}{}
+        \resumeItem{Production planning}{}
+        \resumeItem{Systems administration}{}
+        \resumeItem{Team leader}{Built a small development team.}
+      \resumeItemListEnd
+      
+    \resumeSubSubheading
+      {IT administrator (software developer)}{Feb 2016 -- Aug 2019}
+      \resumeItemListStart
+        \resumeItem{Workflow}{}
+        \resumeItem{Employee review}{}
+        \resumeItem{Systems administration}{}
+      \resumeItemListEnd
+      
+    \resumeSubSubheading
+      {IT administrator}{Jan 2015 -- Jan 2016}
+      \resumeItemListStart
+        \resumeItem{Server administration}{}
+        \resumeItem{Technical support}{Resolving computer issues for company employees.}
+      \resumeItemListEnd
+      
+    \resumeSubSubheading
+      {IT support}{May 2013 -- Dec 2014}
+      \resumeItemListStart
+        \resumeItem{Technical support}{Resolving computer issues for company employees.}
+        \resumeItem{Maintenance}{Building, repairing computers and other electronic appliances.}
+      \resumeItemListEnd
+   \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Statemaker}
+      {Open source python library for financial data analysis and machine learning for finance.}
+    \resumeSubItem{Lambda interpreter}
+      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+  \resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+    \resumeSubItem{Programming Languages}
+      {TypeScript, C++ (C), SQL, Python, HTML, CSS}
+    \resumeSubItem{Technologies}
+      {React, Node, Gitlab, Jira, Docker, Linux}
+    \resumeSubItem{Languages}
+      {English (C1), Czech (native)}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
