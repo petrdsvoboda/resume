@@ -47,9 +47,19 @@
 
 %-------------------------
 % Custom commands
+\newcommand{\resumeItemSimple}[1]{
+  \item\small{
+    \textbf{#1}
+  }
+}
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+\newcommand{\resumeItemLink}[3]{
+  \item\small{
+    \textbf{#1}{: #2\linebreak\href{#3}{#3}\vspace{-2pt}}
   }
 }
 
@@ -68,6 +78,7 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemLink}[3]{\resumeItemLink{#1}{#2}{#3}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -84,15 +95,15 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\stretch{1}}}r|r}
-  \textbf{\href{http://petrdsvoboda.com/}{\Large Bc. Petr Svoboda}} &
+\begin{tabularx}{\textwidth}{l X r r}
+  \textbf{\Large Bc. Petr Svoboda} & &
   Email : \href{mailto:petrdsvoboda@gmail.com}{petrdsvoboda@gmail.com} &
-  \multirow{2}{*}{\smash{\fbox{\includegraphics[width=2cm, valign=c]{profile_pic_sm}}}} \\
+  \multirow{2}{*}{\hspace{0.5cm}\smash{\fbox{\includegraphics[width=2cm, valign=c]{profile_pic_sm}}}} \\
 
-  \href{http://petrdsvoboda.com/}{http://petrdsvoboda.com} &
+  \href{https://www.petrdsvoboda.com/}{https://www.petrdsvoboda.com/} & &
   Mobile : +420 603 451 300 &
   \\
-\end{tabular*}
+\end{tabularx}
 
 
 %-----------EDUCATION-----------------
@@ -113,58 +124,83 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Sécheron Hasler Group}{Prague, Czechia}
-      {ERP analyst (software developer)}{Sep 2019 -- Present}
+      {ERP analyst (Full Stack Web Developer)}{Sep 2019 -- Present}
       \resumeItemListStart
-        \resumeItem{Workflow}{Custom workflow management system implementing processes. Contains complex permission, substitution and approval subsystems.}
-        \resumeItem{Data display}{}
-        \resumeItem{Production planning}{}
-        \resumeItem{Systems administration}{}
-        \resumeItem{Team leader}{Built a small development team.}
+      \resumeItem{Projects}{Most of the projects are developed with the stack --- React, Node.js and PostgreSQL.}
+        \begin{itemize}
+          \resumeItem{Workflow management system}
+            {Custom WMS implementing company processes of requesting item purchase and leave of absence. The system uses state machines for the business process simulation and can handle complex processes.}\vspace{4pt}
+          \resumeItem{COVID-19 testing}
+            {Next.js application for queuing employees present at the company site for testing.}\vspace{4pt}
+           \resumeItem{Data display}
+            {System for showing various multimedia content on displays via web browsers.}\vspace{4pt}
+          \resumeItem{Production planning}
+            {Application for planning production orders defined in the company ERP system.}\vspace{4pt}
+        \end{itemize}
+        \resumeItem{Systems administration}
+          {Administration of systems required for running the projects: Linux servers, database servers, docker containers and CI/CD pipelines.}
       \resumeItemListEnd
       
     \resumeSubSubheading
-      {IT administrator (software developer)}{Feb 2016 -- Aug 2019}
+      {IT administrator (Full Stack Web Developer)}{Feb 2016 -- Aug 2019}
       \resumeItemListStart
-        \resumeItem{Workflow}{}
-        \resumeItem{Employee review}{}
-        \resumeItem{Systems administration}{}
+        \resumeItemSimple{Projects}
+        \begin{itemize}
+          \resumeItem{Employee review}
+            {Application for the annual employee review process.}\vspace{4pt}
+          \resumeItem{Workflow management system}
+            {Prototype of the project mentioned above.}\vspace{4pt}
+          \resumeItem{Stacker management}
+            {Application for managing item requests from stacker storage.}\vspace{4pt}
+          \resumeItem{Barcode database}
+            {Simple web application for storing scanned barcodes in MongoDB.}\vspace{4pt}
+        \end{itemize}
+        \resumeItem{Systems administration}
+          {Implementation and administration of IT ticketing system. Linux server administration.}
       \resumeItemListEnd
       
     \resumeSubSubheading
       {IT administrator}{Jan 2015 -- Jan 2016}
       \resumeItemListStart
-        \resumeItem{Server administration}{}
-        \resumeItem{Technical support}{Resolving computer issues for company employees.}
+        \resumeItemSimple{Windows server administration}
+        \resumeItemSimple{Technical support}
       \resumeItemListEnd
       
     \resumeSubSubheading
       {IT support}{May 2013 -- Dec 2014}
       \resumeItemListStart
-        \resumeItem{Technical support}{Resolving computer issues for company employees.}
-        \resumeItem{Maintenance}{Building, repairing computers and other electronic appliances.}
+        \resumeItemSimple{Technical support}
+        \resumeItemSimple{Computer maintenance}
       \resumeItemListEnd
    \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Personal Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Statemaker}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Lambda interpreter}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+    \resumeSubItemLink{Statemaker}
+      {Web editor of finite state machines developed in React.}
+      {https://gitlab.com/petrdsvoboda/statemaker}
+    \resumeSubItemLink{Lambda interpreter}
+      {Haskell CLI $\lambda$-calculus interpreter.}
+      {https://github.com/petrdsvoboda/lambda-interpreter}
+    \resumeSubItemLink{Genetic Spore}
+      {JavaScript game developed in PixyJS simulating cellular life and evolution.}
+      {https://gitlab.com/petrdsvoboda/genetic-spore}
+    \resumeSubItemLink{DNA alignment visualization}
+      {Simple web application for visualizing similarities in DNA sequences.}
+      {https://gitlab.com/petrdsvoboda/dna-alignment}
   \resumeSubHeadingListEnd
 
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
  \resumeSubHeadingListStart
     \resumeSubItem{Programming Languages}
-      {TypeScript, C++ (C), SQL, Python, HTML, CSS}
+      {TypeScript, HTML, CSS, SQL, Python, C++ (C), Haskell}
     \resumeSubItem{Technologies}
-      {React, Node, Gitlab, Jira, Docker, Linux}
+      {React, Node, Next.js, Tailwind CSS, Material-UI, GitLab CI/CD, Docker, PostgreSQL, Linux, Jira}
     \resumeSubItem{Languages}
       {English (C1), Czech (native)}
  \resumeSubHeadingListEnd
